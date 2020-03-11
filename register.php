@@ -3,8 +3,8 @@
 require_once "db.php";
  
 // Define variables and initialize with empty values
-$username = $email = $password = $confirm_password = "";
-$username_err = $email_err = $password_err = $confirmPassword_err = "";
+$username = $email =  $password = $confirmPassword = "";
+$username_err = $email_err =  $password_err = $confirmPassword_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -41,17 +41,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_close($stmt);
         }
     }
-    
-   //validate email 
+    //validate email 
    if(empty($_POST["email"])){
-       $email_err = "Please enter email";
-   } else {
-    $email = trim($_POST["email"]);
-    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $email_err = "Invalid email";
-    }
+    $email_err = "Please enter email";
+} else {
+ $email = trim($_POST["email"]);
+ if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+     $email_err = "Invalid email";
+ }
 }
-   
+    
     // Validate password
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter a password.";     
@@ -72,18 +71,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     // Check input errors before inserting in database
-    if(empty($username_err) && empty($email_err) && empty($password_err) && empty($confirmPassword_err)){
+    if(empty($username_err) && empty($password_err) && empty($confirmPassword_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_username, $param_email, $param_password);
+            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
             
             // Set parameters
             $param_username = $username;
-            $param_email = $email;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
             
             // Attempt to execute the prepared statement
@@ -141,7 +139,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </div> 
 
         <div <?php echo (!empty($confirmPassword_err)) ? 'has-error' : ''; ?>">
-        <input type="password" name="confirmPassword" placeholder="Confirm Password" value="<?php echo $confirmPassword; ?>" id="cp">
+        <input type="password" name="confirmPassword" placeholder="Confirm Password">
 
         <div >
         <button type="submit" value="submit" class="btn btn-outline-danger">SIGN UP</button>
@@ -150,12 +148,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </form>
 </div>
 
-
-<script>
-    document.getElementById('cp').value = '';
-</script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
