@@ -1,0 +1,78 @@
+.navbar{
+    margin-right: 30px;
+}
+.library{
+    display: inline-flex;
+    line-height: 5vh;
+}  
+
+.container-fluid{
+    background-image:linear-gradient(
+        rgb(245, 245, 245), 
+        rgba(245, 245, 245  , .9)
+      ), url(../photos/bg-school.jpg);
+    width: 100%;
+    height: 82vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    position: absolute;
+    top: 35%;
+    letter-spacing: 5px;
+}
+
+.form{
+    min-width: 500px;
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+#dropdownMenuButton{
+    background-color: white;
+    height: 50px;
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+#search-btn{
+    min-width: 70px;
+}
+footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* BOOK */
+.book-container{
+    background-color:rgb(245, 245, 245);
+    max-height: 100%;
+}
+.book img{
+    height: 180px;
+    width: 130px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr th {
+    text-align: center;
+}
+
+tbody{
+    text-align: center;
+}
+
+#book-srch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
