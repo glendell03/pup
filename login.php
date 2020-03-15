@@ -99,7 +99,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
 <nav>
-        <div class="pup-logo">PUP</div>
+        <div class="pup-logo"><img src="./photos/PUPlogo.png" alt="logo"></div> PUP
     </nav>
 <div class="form-container">
     <div id="error">
@@ -128,9 +128,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
 
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+<script src="i_classroom.js"></script>
 </body>
 </html>

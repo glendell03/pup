@@ -148,5 +148,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </form>
 </div>
 
+<script src="i_classroom.js"></script>
 </body>
 </html>
