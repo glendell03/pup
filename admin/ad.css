@@ -1,0 +1,173 @@
+ /* FORM SECTION */
+ input[type=text]:focus {
+    border: 3px solid #FB667A;
+  }
+  
+  .form{
+      text-align: center;
+  }
+  
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.42em;
+    color:#A7A1AE;
+    background-color:#1F2739;
+  }
+  
+  
+  input[type=text],input[type=number] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 5px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  
+  }
+  
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  
+  }
+  .button {
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 100px;
+    outline: none;
+  
+  }
+  
+  
+  .button4 {
+    background-color: white;
+    color: black;
+  border: 3px solid #555;
+  
+  }
+  /* END OF FORM SECTION */
+  .button4:hover {background-color: #e7e7e7;}
+  /* TABLE SECTION */
+  /*	
+      Side Navigation Menu V2, RWD
+      ===================
+      License:
+      https://goo.gl/EaUPrt
+      ===================
+      Author: @PableraShow
+  
+   */
+  /*	
+      Side Navigation Menu V2, RWD
+      ===================
+      License:
+      https://goo.gl/EaUPrt
+      ===================
+      Author: @PableraShow
+  
+   */
+  
+  
+  .container th h1 {
+        font-weight: bold;
+        font-size: 1em;
+    text-align: left;
+    color: #A7A1AE;
+  }
+  
+  .container td {
+        font-weight: normal;
+        font-size: 1em;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+         -moz-box-shadow: 0 2px 2px -2px #0E1119;
+              box-shadow: 0 2px 2px -2px #0E1119;
+  }
+  
+  .container {
+        text-align: left;
+        
+        width: 100%;
+        
+    display: table;
+    padding: 0 0 8em 0;
+  
+  }
+  
+  .container td, .container th {
+        padding-bottom: 2%;
+        padding-top: 2%;
+    padding-left:2%;  
+  }
+  
+  /* Background-color of the odd rows */
+  .container tr:nth-child(odd) {
+        background-color: #323C50;
+  }
+  
+  /* Background-color of the even rows */
+  .container tr:nth-child(even) {
+        background-color: #2C3446;
+  }
+  
+  .container th {
+        background-color: #1F2739;
+  }
+  
+  .container td:first-child { color: #FB667A; }
+  
+  .container tr:hover {
+     background-color: #464A52;
+  -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+         -moz-box-shadow: 0 6px 6px -6px #0E1119;
+              box-shadow: 0 6px 6px -6px #0E1119;
+  }
+  
+  .container td:hover {
+    background-color: #FFF842;
+    color: #403E10;
+    
+    
+   /* box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(6px, -6px, 0);*/
+    
+    transition-delay: 0s;
+        transition-duration: 0.4s;
+        transition-property: all;
+    transition-timing-function: line;
+  }
+  
+  
+  /* END OF TABLE SECTION */
+  
+  /* edit , del button */
+  
+  
+  .del_btn {
+      text-decoration: none;
+      padding: 5px 5px;
+      color: white;
+      border-radius: 3px;
+      background: #800000;
+      position: static;
+  }
+  
+  .edit_btn {
+      text-decoration: none;
+      padding: 5px 5px;
+      color: white;
+      border-radius: 3px;
+      background: #800000;
+      position: static;
+  }
+  /* end */

@@ -1,13 +1,4 @@
-<?php
-// Initialize the session
-session_start();
- 
-// Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: ../include/login.php");
-    exit;
-}
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,30 +14,29 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     
     
     <script src="https://kit.fontawesome.com/d13d21d11b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./landing/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+    .btn a{
+        color: white;
+        text-decoration: none;
+    }
+</style>
 </head>
 <body>
-
 <nav class="navbar navbar-light">
     <a class="navbar-brand" href="#">
-      <img src="../photos/PUPLogo.png" width="45" height="45" class="d-inline-block align-top" alt="logo">
+      <img src="./photos/PUPLogo.png" width="45" height="45" class="d-inline-block align-top" alt="logo">
 <span class="library">Library Book Manager</span>
     </a>
 
-    <div class="dropdown">
-        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          My Account
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="../include/logout.php">Log out</a>
-        </div>
-      </div>
+    <button type="button" class="btn btn-danger" ><a href="./include/login.php">LOG IN</a></button>
+    
   </nav>
 
 <div class="container-fluid">
   <h1>Library</h1>
-
   <form action="books.php">
   <div class="search">
     <div>
@@ -68,7 +58,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <a class="dropdown-item" href="#">ACCOUNTANCY</a>
           </div>
         </div>
-</form>
+
+  </form>
       </div>
       <input type="text" class="form" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
       <div class="input-group-prepend">
