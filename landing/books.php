@@ -1,5 +1,3 @@
-<?php include ('navbar.php'); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +15,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
+<nav class="navbar navbar-light">
+    <a class="navbar-brand" href="#">
+      <img src="../photos/PUPLogo.png" width="45" height="45" class="d-inline-block align-top" alt="logo">
+<span class="library">Library Book Manager</span>
+    </a>
+
+    <div class="dropdown">
+        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          My Account
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="../include/logout.php">Log out</a>
+        </div>
+      </div>
+  </nav>
     <div class="book-container">
     <form class="form-inline my-2 my-lg-0" id="book-srch">
         <input class="form book-srch" type="search" placeholder="Search" aria-label="Search">
